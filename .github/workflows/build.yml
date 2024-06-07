@@ -36,7 +36,7 @@ jobs:
       - name: docker pull image
         run: docker pull vamshikarnekota/swiggy-clone:latest
       - name: Image scan
-        run: trivy image vamshikarnekota/swiggy-clone:latest > trivyimagedeploy.txt
+        run: trivy image aakibkhan1212/swiggy-clone:latest > trivyimagedeploy.txt
       - name: Deploy to container
         run: docker run -d --name swiggy-clone1 -p 3000:3000 vamshikarnekota/swiggy-clone:latest
       - name: Update kubeconfig
